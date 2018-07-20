@@ -1,10 +1,9 @@
 export default {
   name: 'login',
-  components: {}, 
+  components: {},
   props: [],
   data () {
     return {
-
     }
   },
   computed: {
