@@ -74,6 +74,12 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.html$/,
+        loader: 'vue-loader',
+        // We don't want to pass `src/index.html` file to this loader.
+        exclude: /index.html/,
       }
     ]
   },
