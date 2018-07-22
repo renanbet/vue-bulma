@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-> A basic structure to build project with vuejs and bulma
+> A basic structure to develop a project with vuejs and bulma
 
 > Components:
   - layout
