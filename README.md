@@ -3,7 +3,7 @@
 > A Vue.js project
 
 > A basic structure to build project with vuejs and bulma
-Components :
+> Components :
   - layout
     - navbar
     - toast
