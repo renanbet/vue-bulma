@@ -1,9 +1,10 @@
 export default {
-  name: 'login',
-  components: {},
+  name: 'modal',
+  components: {}, 
   props: [],
   data () {
     return {
+
     }
   },
   computed: {
@@ -13,7 +14,6 @@ export default {
 
   },
   methods: {
-    login () {
-    }
+
   }
 }

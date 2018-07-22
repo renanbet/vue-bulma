@@ -1,14 +1,13 @@
 <div id="app">
   <section class="hero">
-    <!-- Hero header: will stick at the top -->
     <div class="hero-head">
       <navbar></navbar>
     </div>
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-      <div class="container">
-        <router-view/>
-      </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <router-view/>
     </div>
   </section>
+  <toast timeout="5000"></toast>
 </div>

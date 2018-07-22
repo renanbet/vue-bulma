@@ -1,0 +1,7 @@
+
+<div class="toast">
+  <div v-for="item in items" :key="item.index" class="notification" v-show="item.show" v-bind:class="item.type">
+    <button class="delete" @click="remove(item)"></button>
+    {{item.message}}
+  </div>
+</div>

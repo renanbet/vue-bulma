@@ -1,8 +1,10 @@
-import navbar from '@/components/navbar'
+import navbar from '@/components/layout/navbar'
+import toast from '@/components/layout/toast'
 
 export default {
   name: 'App',
   components: {
-    navbar
+    navbar,
+    toast
   }
 }
