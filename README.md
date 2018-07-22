@@ -6,8 +6,8 @@
 
 > Components:
   - layout
-   - navbar
-   - toast
+    - navbar
+    - toast
   - login
 
 ## Build Setup
