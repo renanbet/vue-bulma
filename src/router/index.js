@@ -28,7 +28,7 @@ router.beforeEach((to, from, next) => {
   let goNext = true
 
   if (!to.name) {
-    window.location = '/'
+    goNext = false
   }
 
   if (to.meta.requiresAuth) {
