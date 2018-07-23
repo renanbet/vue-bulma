@@ -6,5 +6,10 @@ export default {
   components: {
     navbar,
     toast
+  },
+  data () {
+    return {
+      timeout: 4000
+    }
   }
 }

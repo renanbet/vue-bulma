@@ -25,7 +25,7 @@ export default {
       toast.show = true;
       setTimeout(() => {
          this.remove(toast)
-      }, this.timeout);
+      }, parseInt(this.timeout));
       this.items.push(toast)
     })
   },
