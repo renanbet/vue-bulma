@@ -17,6 +17,12 @@
   - router
   - local storage
   - axios
+  
+> e2e tests
+coming soon
+
+> unit tests
+coming soon
 
 ## Build Setup
 
