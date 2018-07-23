@@ -17,11 +17,8 @@ Using the v-bind: directive to reactively update the class attribute 'is-active'
 -->
   <div class="navbar-menu" :class="{ 'is-active': showNav }">
     <div class="navbar-end">
-      <a class="navbar-item" href="#">
-        home
-      </a>
-      <a class="navbar-item" href="#">
-        profile
+      <a v-for="item in menu" class="navbar-item" href="#">
+        <router-link :to="item.to">{{item.name}}</router-link>
       </a>
     </div>
   </div>

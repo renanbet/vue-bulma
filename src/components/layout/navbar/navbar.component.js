@@ -1,7 +1,12 @@
 export default {
   name: 'navbar',
   components: {},
-  props: [],
+  props: {
+    menu: {
+      type: Array,
+      default: []
+    }
+  },
   data () {
     return {
       showNav: false

@@ -9,7 +9,17 @@ export default {
   },
   data () {
     return {
-      timeout: 4000
+      timeout: 4000,
+      menu: [
+        {
+          to: 'home',
+          name: 'Home'
+        },
+        {
+          to: '/',
+          name: 'Logout'
+        }
+      ]
     }
   }
 }
