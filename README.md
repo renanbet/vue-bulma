@@ -8,7 +8,15 @@
   - layout
     - navbar
     - toast
+    - modal
   - login
+  - home
+
+> services
+  - auth
+  - router
+  - local storage
+  - axios
 
 ## Build Setup
 
