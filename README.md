@@ -8,7 +8,21 @@
   - layout
     - navbar
     - toast
+    - modal
   - login
+  - home
+
+> services
+  - auth
+  - router
+  - local storage
+  - axios
+  
+> e2e tests
+coming soon
+
+> unit tests
+coming soon
 
 ## Build Setup
 
