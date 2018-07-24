@@ -19,6 +19,14 @@ class AuthService {
     return this.getUser() !== null
   }
 
+  generateUser (name, email, token) {
+    return {
+      userName: name,
+      email,
+      access_token: token
+    }
+  }
+
   getToken () {
     return this.localStorageService.get('user').access_token
   }
@@ -37,6 +45,10 @@ class AuthService {
 
   removeUser () {
     this.localStorageService.remove('user')
+  }
+
+  getHomePage () {
+    return 'home'
   }
 }
 export default () => {

@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import GoogleSignInButton from 'vue-google-signin-button'
 
+Vue.use(GoogleSignInButton)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

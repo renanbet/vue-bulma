@@ -1,7 +1,6 @@
-import BaseService from '@/shared/services/base.service'
 import AuthService from '@/shared/auth/auth.service'
 
-class LoginService extends BaseService {
+class LoginService {
   static instance = null;
 
   static getInstance () {
@@ -12,24 +11,18 @@ class LoginService extends BaseService {
   }
 
   constructor () {
-    super('/token')
     this.authService = AuthService()
   }
 
-  login (userName, password) {
-    return this.generateToken(userName, password)
+  saveFormUser (formUser) {
+    const user = this.authService.generateUser(formUser.userName, formUser.email, formUser.token)
+    this.authService.saveUser(user)
   }
 
-  generateToken (userName, password) {
-    const grantType = 'grant_type=password'
-    let user = `username=${encodeURIComponent(userName)}`
-    let pass = `password=${encodeURIComponent(password)}`
-    let data = `${grantType}&${user}&${pass}`
-
-    return this.post(data)
-  }
-
-  saveUser (user) {
+  saveGoogleUser (googleUser) {
+    const profile = googleUser.getBasicProfile()
+    const auth = googleUser.getAuthResponse()
+    const user = this.authService.generateUser(profile.getName(), profile.getEmail(), auth.id_token)
     this.authService.saveUser(user)
   }
 
@@ -39,6 +32,10 @@ class LoginService extends BaseService {
 
   logout () {
     this.removeUser()
+  }
+
+  getHomePage () {
+    return this.authService.getHomePage()
   }
 }
 export default () => {

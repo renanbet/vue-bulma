@@ -1,30 +1,38 @@
 import LoginService from './login.service'
+import GoogleLogin from './google-login'
+import FormLogin from './form-login'
 
 export default {
   name: 'login',
-  components: {},
+  components: {
+    GoogleLogin,
+    FormLogin
+  },
   props: [],
   data () {
     return {
-      userName: '',
-      password: '',
-      loginService: LoginService()
+      loginService: LoginService(),
+      googleLogin: true,
+      formLogin: true
     }
   },
   computed: {
 
   },
   mounted () {
-
+    this.loginService.logout()
   },
   methods: {
-    async login () {
-      try {
-        let user = await this.loginService.login(this.userName, this.password)
-        this.loginService.saveUser(user)
-      } catch (error) {
-        console.log(error)
-      }
+    loginForm (formUser) {
+      this.loginService.saveFormUser(formUser)
+      this.goHome()
+    },
+    loginGoogle (googleUser) {
+      this.loginService.saveGoogleUser(googleUser)
+      this.goHome()
+    },
+    goHome () {
+      this.$router.push(this.loginService.getHomePage())
     }
   }
 }
