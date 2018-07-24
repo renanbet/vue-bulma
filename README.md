@@ -10,6 +10,8 @@
     - toast
     - modal
   - login
+    - form
+    - google
   - home
 
 > services
@@ -17,7 +19,7 @@
   - router
   - local storage
   - axios
-  
+
 > e2e tests
 coming soon
 
