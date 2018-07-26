@@ -1,10 +1,10 @@
-import navbar from '@/components/layout/navbar'
+import utilities from '@/components/utilities'
 import toast from '@/components/layout/toast'
 
 export default {
   name: 'App',
   components: {
-    navbar,
+    utilities,
     toast
   },
   data () {

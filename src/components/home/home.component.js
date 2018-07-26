@@ -1,6 +1,6 @@
 export default {
   name: 'home',
-  components: {}, 
+  components: {},
   props: [],
   data () {
     return {
@@ -14,6 +14,8 @@ export default {
 
   },
   methods: {
-
+    showToast () {
+      this.$root.$emit('toast',{message:'oi', type:'is-success'})
+    }
   }
 }

@@ -13,13 +13,14 @@ export default {
     return {
       loginService: LoginService(),
       googleLogin: true,
-      formLogin: true
+      formLogin: false
     }
   },
   computed: {
 
   },
   mounted () {
+    this.$root.$emit('utilities',false)
     this.loginService.logout()
   },
   methods: {
@@ -32,6 +33,7 @@ export default {
       this.goHome()
     },
     goHome () {
+      this.$root.$emit('utilities', true)
       this.$router.push(this.loginService.getHomePage())
     }
   }

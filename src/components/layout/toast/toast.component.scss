@@ -1,8 +1,9 @@
 .toast {
-  top: 10%;
+  top: 7%;
   right: 7%;
   height: 100%;
   position: absolute;
+  z-index: 35;
   .notification {
     max-width: 400px;
     margin-top: 10px;
