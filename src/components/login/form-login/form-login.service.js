@@ -15,12 +15,16 @@ class FormLoginService extends BaseService {
   }
 
   login (userName, password) {
-    const grantType = 'grant_type=password'
-    let user = `username=${encodeURIComponent(userName)}`
-    let pass = `password=${encodeURIComponent(password)}`
-    let data = `${grantType}&${user}&${pass}`
-
-    return this.post(data)
+    // const grantType = 'grant_type=password'
+    // let user = `username=${encodeURIComponent(userName)}`
+    // let pass = `password=${encodeURIComponent(password)}`
+    // let data = `${grantType}&${user}&${pass}`
+    // return this.post(data)
+    return {
+      userName,
+      'email': 'email',
+      'token': 'token'
+    }
   }
 }
 export default () => {
