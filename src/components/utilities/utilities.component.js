@@ -25,7 +25,8 @@ export default {
   },
   mounted () {
     this.$root.$on('utilities', show => {
-      this.show = show;
+      let isShow = show ? show : true
+      this.show = isShow;
     })
   },
   methods: {
