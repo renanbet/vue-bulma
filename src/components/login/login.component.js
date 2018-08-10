@@ -12,8 +12,8 @@ export default {
   data () {
     return {
       loginService: LoginService(),
-      googleLogin: true,
-      formLogin: false
+      googleLogin: false,
+      formLogin: true
     }
   },
   computed: {
