@@ -3,18 +3,18 @@
   <div class="field">
     <label class="label">Login</label>
     <div class="control">
-      <input class="input" type="text" placeholder="Username" v-model="form.userName">
+      <input class="input" type="text" placeholder="Username" v-model="userName">
     </div>
-    <p class="help is-danger" v-show="!$v.form.userName.required">This login is required</p>
-    <p class="help is-danger" v-show="!$v.form.userName.minLength">This login must be at least 4 characters</p>
+    <p class="help is-danger" v-show="!$v.userName.required">This login is required</p>
+    <p class="help is-danger" v-show="!$v.userName.minLength">This login must be at least 4 characters</p>
   </div>
   <div class="field">
     <label class="label">Password</label>
     <div class="control">
-      <input class="input" type="password" placeholder="Password" v-model="form.password">
+      <input class="input" type="password" placeholder="Password" v-model="password">
     </div>
-    <p class="help is-danger" v-show="!$v.form.password.required">This password is required</p>
-    <p class="help is-danger" v-show="!$v.form.password.minLength">This password must be at least 6 characters</p>
+    <p class="help is-danger" v-show="!$v.password.required">This password is required</p>
+    <p class="help is-danger" v-show="!$v.password.minLength">This password must be at least 6 characters</p>
   </div>
   <div class="field is-grouped">
     <div class="control">

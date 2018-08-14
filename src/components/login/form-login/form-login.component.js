@@ -6,39 +6,29 @@ export default {
   name: 'form-login',
   mixins: [validationMixin],
   components: {},
-  props: [],
+  props: {},
   data () {
     return {
-      form: {
-        userName: '',
-        password: '',
-      },
+      userName: '',
+      password: '',
       formLoginService: FormLoginService()
     }
   },
   validations: {
-    form: {
-      userName: {
-        required,
-        minLength: minLength(4)
-      },
-      password: {
-        required,
-        minLength: minLength(6)
-      }
+    userName: {
+      required,
+      minLength: minLength(4)
+    },
+    password: {
+      required,
+      minLength: minLength(6)
     }
-  },
-  computed: {
-
-  },
-  mounted () {
-
   },
   methods: {
     async login () {
-      if (!this.$v.form.$invalid) {
+      if (!this.$v.$invalid) {
         try {
-          let user = await this.formLoginService.login(this.form.userName, this.form.password)
+          let user = await this.formLoginService.login(this.userName, this.password)
           this.$emit('loginForm', user)
         } catch (error) {
           this.$root.$emit('toast',{message:error, type:'is-danger'})
